@@ -49,11 +49,20 @@ export default function Hero({ isLoaded, scrollY }) {
             style={{ transform: `translate3d(0, ${typographyParallax}px, 0)` }}
             className="lg:col-span-7 flex flex-col justify-center z-20 space-y-4 md:space-y-6"
           >
-            {/* Small Introduction Badge */}
-            <motion.div variants={itemVariants} className="inline-flex items-center space-x-2">
-              <span className="glass-pill px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide text-slate-800 backdrop-blur-md flex items-center gap-1.5 shadow-sm">
-                <span>👋 Hey, I'm</span>
-                <span className="font-extrabold text-sky-700 underline decoration-sky-400 decoration-2 underline-offset-2">
+            {/* Small Introduction */}
+            <motion.div variants={itemVariants} className="flex items-center space-x-2.5 text-base sm:text-lg md:text-xl font-medium tracking-wide text-white drop-shadow-xs">
+              <motion.span 
+                animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
+                transition={{ repeat: Infinity, repeatDelay: 2, duration: 1.5, ease: 'easeInOut' }}
+                className="inline-block origin-bottom-right text-xl sm:text-2xl select-none"
+                role="img"
+                aria-label="Waving hand"
+              >
+                👋
+              </motion.span>
+              <span>
+                Hey, I'm{' '}
+                <span className="font-extrabold text-white underline decoration-white/70 decoration-2 underline-offset-4">
                   Akhil
                 </span>
               </span>
