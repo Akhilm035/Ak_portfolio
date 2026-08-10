@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Left Branding */}
         <div>
           <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white mb-2">
-            AKHIL MENON
+            AKHIL MOHANAN
           </h3>
           <p className="text-slate-400 text-sm max-w-sm">
             Product Designer · UI/UX Designer · UX Tester · AI-Assisted Web Builder based in Kannur, Kerala.
@@ -65,7 +65,7 @@ export default function Footer() {
 
       {/* Footer Bottom Bar */}
       <div className="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-        <span>© {new Date().getFullYear()} Akhil Menon. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} Akhil Mohanan. All rights reserved.</span>
         
         <button
           onClick={scrollToTop}

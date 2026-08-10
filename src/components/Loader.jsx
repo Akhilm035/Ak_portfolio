@@ -62,7 +62,7 @@ export default function Loader({ onComplete }) {
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
               className="text-2xl sm:text-3xl md:text-5xl font-light tracking-[0.25em] text-slate-500 uppercase"
             >
-              MENON
+              MOHANAN
             </motion.span>
           </div>
 
