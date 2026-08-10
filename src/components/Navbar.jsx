@@ -40,16 +40,8 @@ export default function Navbar({ isScrolled, isLoaded }) {
             className="flex items-center space-x-2.5 group focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-full"
             aria-label="Akhil Mohanan Home"
           >
-            <div className="w-8 h-8 md:w-9 md:h-9 rounded-full overflow-hidden border-2 border-white/80 shadow-xs flex-shrink-0 bg-sky-100">
-              <img
-                src="/profile.png"
-                alt="Akhil Mohanan"
-                className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-110"
-                onError={(e) => {
-                  // Fallback avatar icon if image loading fails
-                  e.target.style.display = 'none';
-                }}
-              />
+            <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-gradient-to-br from-sky-500 to-blue-700 text-white font-extrabold text-xs flex items-center justify-center border-2 border-white shadow-xs flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+              AM
             </div>
             <span className="text-xs md:text-sm font-extrabold tracking-wider text-slate-900 uppercase pr-1 md:pr-2">
               AKHIL

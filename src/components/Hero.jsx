@@ -1,12 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Sparkles, Code2, Compass, Layers } from 'lucide-react';
+import { MapPin, Sparkles } from 'lucide-react';
 import CloudLayer from './CloudLayer';
 
 export default function Hero({ isLoaded, scrollY }) {
   // Parallax offsets calculation (subtle, GPU-accelerated)
   const typographyParallax = scrollY * 0.18;
-  const personParallax = scrollY * 0.12;
 
   // Staggered reveal animation variants
   const containerVariants = {
@@ -34,20 +33,20 @@ export default function Hero({ isLoaded, scrollY }) {
       {/* Multi-layered Seamless Sky Cloud Animation */}
       <CloudLayer />
 
-      {/* Atmospheric Soft Light Overlay & Subtle Ledge Shadow */}
+      {/* Atmospheric Soft Light Overlay */}
       <div className="absolute inset-0 bg-radial from-transparent via-white/5 to-black/10 pointer-events-none z-0"></div>
 
       {/* Main Atmospheric Content Container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-28 md:pt-32 lg:pt-36 flex-1 flex flex-col justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center h-full">
+        <div className="flex flex-col justify-center h-full max-w-4xl">
           
-          {/* Left Column: Oversized Editorial Typography & Bio */}
+          {/* Main Editorial Typography & Bio */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate={isLoaded ? 'visible' : 'hidden'}
             style={{ transform: `translate3d(0, ${typographyParallax}px, 0)` }}
-            className="lg:col-span-7 flex flex-col justify-center z-20 space-y-4 md:space-y-6"
+            className="flex flex-col justify-center z-20 space-y-4 md:space-y-6"
           >
             {/* Small Introduction */}
             <motion.div variants={itemVariants} className="flex items-center space-x-2.5 text-base sm:text-lg md:text-xl font-medium tracking-wide text-white drop-shadow-xs">
@@ -84,11 +83,11 @@ export default function Hero({ isLoaded, scrollY }) {
             </motion.div>
 
             {/* Supporting Text */}
-            <motion.div variants={itemVariants} className="space-y-2 pt-2 max-w-xl">
+            <motion.div variants={itemVariants} className="space-y-2 pt-2 max-w-2xl">
               <p className="text-lg sm:text-xl md:text-2xl font-medium tracking-tight text-white/95 leading-snug drop-shadow-xs">
                 Designing products. Testing experiences. Building the web.
               </p>
-              <p className="text-xs sm:text-sm md:text-base font-normal tracking-wide text-white/80 flex flex-wrap items-center gap-x-2 gap-y-1">
+              <p className="text-xs sm:text-sm md:text-base font-normal tracking-wide text-white/80 flex flex-wrap items-center gap-x-2.5 gap-y-1">
                 <span>Product Design</span>
                 <span className="w-1 h-1 rounded-full bg-white/60"></span>
                 <span>UI/UX</span>
@@ -98,31 +97,6 @@ export default function Hero({ isLoaded, scrollY }) {
                 <span>AI-Assisted Development</span>
               </p>
             </motion.div>
-          </motion.div>
-
-          {/* Right Column: Person Image sitting on Ledge */}
-          <motion.div
-            initial={{ opacity: 0, y: 45, scale: 0.95 }}
-            animate={isLoaded ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 45, scale: 0.95 }}
-            transition={{ duration: 0.9, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            style={{ transform: `translate3d(0, ${personParallax}px, 0)` }}
-            className="lg:col-span-5 relative flex items-end justify-center lg:justify-end h-full z-10 mt-6 lg:mt-0"
-          >
-            {/* Ledge Lighting Accent Glow */}
-            <div className="absolute bottom-4 right-8 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-
-            {/* Person Cutout Image Slot */}
-            <div className="relative w-64 sm:w-80 md:w-96 lg:w-[440px] max-w-full group">
-              <img
-                src="/profile.png"
-                alt="Akhil - Product Designer"
-                className="w-full h-auto object-contain object-bottom drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02] filter contrast-[1.03]"
-                loading="eager"
-              />
-              
-              {/* Subtle Ledge Base Gradient Line */}
-              <div className="w-full h-1 bg-gradient-to-r from-transparent via-white/50 to-transparent rounded-full blur-xs mt-[-4px]"></div>
-            </div>
           </motion.div>
 
         </div>
