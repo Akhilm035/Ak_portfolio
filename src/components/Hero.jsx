@@ -30,7 +30,7 @@ export default function Hero({ isLoaded, scrollY }) {
   };
 
   return (
-    <section className="relative w-full min-h-screen h-[100vh] flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#3192d6] via-[#63b3ea] to-[#f8f9fa] text-white select-none">
+    <section className="relative w-full min-h-screen h-[100vh] flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#0c5eb9] via-[#2481e2] via-60% to-[#f8f9fa] text-white select-none">
       {/* Multi-layered Seamless Sky Cloud Animation */}
       <CloudLayer />
 
