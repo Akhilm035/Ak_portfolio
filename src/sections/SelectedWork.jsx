@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, ArrowUpRight } from 'lucide-react';
 
 export default function SelectedWork() {
   const projects = [
@@ -84,19 +84,29 @@ export default function SelectedWork() {
 
                   {/* Left Column: Copy & Details */}
                   <div className="lg:col-span-7 flex flex-col justify-between h-full space-y-6 md:space-y-8 z-10">
-                    {/* Number & Year strip */}
-                    <div className="flex items-center space-x-3 text-xs sm:text-sm font-semibold tracking-wider text-white/80 uppercase">
+                    {/* Top Row: Number, Center ↗ Link & Year */}
+                    <div className="flex items-center justify-between w-full">
                       <span className="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-xs font-bold">
                         {project.number}
                       </span>
-                      <span>•</span>
-                      <span>{project.year}</span>
+                      
+                      {/* Glassmorphic ↗ Button */}
+                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/15 hover:bg-white/25 border border-white/20 flex items-center justify-center text-white transition-all cursor-pointer shadow-sm hover:scale-105 active:scale-95 group/btn">
+                        <ArrowUpRight size={20} className="stroke-[2.5]" />
+                      </div>
+
+                      <span className="text-xs sm:text-sm font-semibold tracking-wider text-white/80">
+                        {project.year}
+                      </span>
                     </div>
 
                     {/* Headline */}
                     <h3 className="text-3xl sm:text-4xl lg:text-[42px] font-black tracking-tight leading-none text-white max-w-xl">
                       {project.title}
                     </h3>
+
+                    {/* Horizontal Divider Line */}
+                    <div className="w-full h-[1px] bg-white/20 my-1"></div>
 
                     {/* Specialty tags */}
                     <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm font-semibold">
