@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowUpRight, CheckCircle2, Layers, Cpu, Smartphone, Sparkles } from 'lucide-react';
 
-export default function SelectedWork() {
+export default function SelectedWork({ onPageChange }) {
   const [activeFilter, setActiveFilter] = useState('All');
 
   const projects = [
@@ -59,8 +59,25 @@ export default function SelectedWork() {
     : projects.filter(p => p.category === activeFilter);
 
   return (
-    <section id="work" className="w-full bg-[#f8f9fa] py-24 text-slate-900 border-t border-slate-200/60">
+    <section id="work" className="w-full bg-[#f8f9fa] pt-32 md:pt-40 pb-24 text-slate-900 border-t border-slate-200/60">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+        
+        {/* Back Link Breadcrumb */}
+        {onPageChange && (
+          <div className="mb-8 flex justify-start">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                onPageChange('home');
+              }}
+              className="text-xs font-bold text-slate-400 hover:text-sky-600 transition-colors uppercase tracking-widest flex items-center space-x-1.5 group"
+            >
+              <span className="transform group-hover:-translate-x-1 transition-transform duration-250">&larr;</span>
+              <span>Back to home</span>
+            </a>
+          </div>
+        )}
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
