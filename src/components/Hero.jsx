@@ -34,7 +34,7 @@ export default function Hero({ isLoaded, scrollY }) {
       <CloudLayer />
 
       {/* Main Content Container */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-28 md:pt-32 lg:pt-36 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-28 md:pt-32 lg:pt-36 pb-12 md:pb-20 flex-1 flex flex-col justify-center">
         <div className="flex flex-col justify-center h-full max-w-4xl">
           
           {/* Main Editorial Typography & Bio */}
