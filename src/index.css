@@ -101,6 +101,16 @@
   will-change: transform;
 }
 
+.animate-cloud-float {
+  animation: cloudMoveSlow 110s linear infinite;
+  will-change: transform;
+}
+
+.animate-cloud-drift {
+  animation: cloudMoveSlow 70s linear infinite;
+  will-change: transform;
+}
+
 /* Glassmorphism Styles */
 .glass-pill {
   background: rgba(255, 255, 255, 0.72);
