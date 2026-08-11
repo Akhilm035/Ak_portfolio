@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import WhatIDo from './sections/WhatIDo';
 import SelectedWork from './sections/SelectedWork';
 import Footer from './sections/Footer';
 
@@ -34,11 +35,14 @@ export default function App() {
       <main>
         <Hero isLoaded={isLoaded} scrollY={scrollY} />
 
-        {/* 4. Selected Work Portfolio Grid */}
+        {/* 4. What I Do Section */}
+        <WhatIDo />
+
+        {/* 5. Selected Work Portfolio Grid */}
         <SelectedWork />
       </main>
 
-      {/* 5. Minimal Footer */}
+      {/* 6. Minimal Footer */}
       <Footer />
     </div>
   );
