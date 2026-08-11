@@ -74,6 +74,37 @@ export default function WhatIDo() {
                 );
               })}
             </h3>
+
+            {/* Quantitative Metrics Section */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-16 md:mt-20 pt-12 md:pt-16 border-t border-slate-200/50">
+              
+              {/* Stat 1: Years Designing */}
+              <div className="flex flex-col">
+                <div className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-blue-600 tracking-tight">
+                  2+
+                </div>
+                <div className="text-lg sm:text-xl font-bold text-slate-900 mt-3 sm:mt-4">
+                  Years designing
+                </div>
+                <div className="text-slate-500 font-medium leading-relaxed text-sm sm:text-base mt-1.5">
+                  consumer products, enterprise software & design systems
+                </div>
+              </div>
+
+              {/* Stat 2: Users Reached */}
+              <div className="flex flex-col">
+                <div className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-blue-600 tracking-tight">
+                  5M+
+                </div>
+                <div className="text-lg sm:text-xl font-bold text-slate-900 mt-3 sm:mt-4">
+                  Users
+                </div>
+                <div className="text-slate-500 font-medium leading-relaxed text-sm sm:text-base mt-1.5">
+                  reached by the products I've helped ship at Mygate.
+                </div>
+              </div>
+
+            </div>
           </div>
 
         </div>
