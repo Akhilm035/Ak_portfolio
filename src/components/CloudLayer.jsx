@@ -42,8 +42,8 @@ export default function CloudLayer() {
       </div>
 
       {/* 3. Layer 1: Towering Right Cumulus Cloud Wall (Animated Layer) */}
-      <div className="absolute -right-[6%] sm:-right-[3%] bottom-0 w-[550px] sm:w-[700px] lg:w-[880px] h-[85%] opacity-95 animate-cloud-float pointer-events-none z-10">
-        <svg className="w-full h-full" viewBox="0 0 880 800" fill="none" preserveAspectRatio="none">
+      <div className="absolute -right-[6%] sm:-right-[3%] bottom-0 w-[550px] sm:w-[700px] lg:w-[880px] h-[85%] opacity-95 animate-cloud-float pointer-events-none z-10 overflow-visible">
+        <svg className="w-full h-full overflow-visible" viewBox="0 0 880 800" fill="none" preserveAspectRatio="none">
           <g filter="url(#cloud-gaussian-blur)" fill="url(#sun-cumulus-light)">
             {/* Towering Fluffy Cloud Billows */}
             <circle cx="680" cy="550" r="230" />
@@ -58,8 +58,8 @@ export default function CloudLayer() {
       </div>
 
       {/* 4. Layer 2: Horizon Soft Cloud Sea (Animated Layer) */}
-      <div className="absolute bottom-0 left-0 w-[150%] h-[48%] opacity-90 animate-cloud-drift pointer-events-none z-10">
-        <svg className="w-full h-full" viewBox="0 0 1500 480" fill="none" preserveAspectRatio="none">
+      <div className="absolute bottom-0 left-0 w-[150%] h-[48%] opacity-90 animate-cloud-drift pointer-events-none z-10 overflow-visible">
+        <svg className="w-full h-full overflow-visible" viewBox="0 0 1500 480" fill="none" preserveAspectRatio="none">
           <g filter="url(#horizon-gaussian-blur)" fill="url(#sun-cumulus-light)">
             <ellipse cx="200" cy="380" rx="360" ry="150" />
             <ellipse cx="650" cy="410" rx="420" ry="140" />
