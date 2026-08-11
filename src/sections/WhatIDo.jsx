@@ -76,14 +76,16 @@ export default function WhatIDo() {
             </h3>
 
             {/* Quantitative Metrics Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-16 md:mt-20 pt-12 md:pt-16 border-t border-slate-200/50">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mt-16 md:mt-20">
               
               {/* Stat 1: Years Designing */}
               <div className="flex flex-col">
                 <div className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-blue-600 tracking-tight">
                   2+
                 </div>
-                <div className="text-lg sm:text-xl font-bold text-slate-900 mt-3 sm:mt-4">
+                {/* Horizontal line below number */}
+                <div className="w-full h-[1px] bg-slate-200/80 my-4"></div>
+                <div className="text-lg sm:text-xl font-bold text-slate-900 mt-1">
                   Years designing
                 </div>
                 <div className="text-slate-500 font-medium leading-relaxed text-sm sm:text-base mt-1.5">
@@ -96,7 +98,9 @@ export default function WhatIDo() {
                 <div className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-blue-600 tracking-tight">
                   5M+
                 </div>
-                <div className="text-lg sm:text-xl font-bold text-slate-900 mt-3 sm:mt-4">
+                {/* Horizontal line below number */}
+                <div className="w-full h-[1px] bg-slate-200/80 my-4"></div>
+                <div className="text-lg sm:text-xl font-bold text-slate-900 mt-1">
                   Users
                 </div>
                 <div className="text-slate-500 font-medium leading-relaxed text-sm sm:text-base mt-1.5">
