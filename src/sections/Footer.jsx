@@ -7,7 +7,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="about" className="w-full bg-slate-900 text-white py-16 px-6 md:px-12 lg:px-16 relative overflow-hidden select-none">
+    <footer id="footer" className="w-full bg-slate-900 text-white py-16 px-6 md:px-12 lg:px-16 relative overflow-hidden select-none">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 border-b border-slate-800 pb-12">
         
         {/* Left Branding */}
