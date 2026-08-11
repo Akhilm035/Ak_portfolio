@@ -84,7 +84,7 @@ export default function Hero({ isLoaded, scrollY }) {
               <p className="text-base sm:text-lg md:text-xl font-medium tracking-tight text-slate-800 leading-snug">
                 Designing products. Building the web. Testing experiences{' '}
                 <a 
-                  href="https://livetronics.com" 
+                  href="https://livetronics.ai/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-blue-600 hover:underline font-bold transition-all duration-200"
