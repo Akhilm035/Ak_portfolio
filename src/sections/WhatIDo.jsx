@@ -21,15 +21,14 @@ export default function WhatIDo() {
           <div className="lg:col-span-9 flex flex-col justify-start">
             {/* Main Editorial Statement using Custom Copy */}
             <h3 className="text-3xl sm:text-5xl md:text-[54px] font-extrabold tracking-tight text-slate-900 leading-[1.15] max-w-4xl">
-              Product Designer focused on turning complex problems into{' '}
+              Product Designer turning complex problems into{' '}
               <span className="font-script text-blue-600 font-normal inline-block transform translate-y-1">
                 simple
               </span>
-              {' '}and meaningful digital experiences.{' '}
+              , meaningful digital experiences.{' '}
               <span className="text-slate-400/90 font-bold block sm:inline">
                 I design web and mobile products end-to-end, combining product thinking, UX strategy, 
-                interaction design, and usability testing to create experiences that are intuitive, scalable, 
-                and impactful.
+                and interaction design to create intuitive, impactful experiences.
               </span>
             </h3>
           </div>
