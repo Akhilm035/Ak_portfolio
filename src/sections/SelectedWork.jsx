@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 
 export default function SelectedWork() {
@@ -40,9 +41,15 @@ export default function SelectedWork() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-16 md:mb-24">
+        <motion.div 
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col items-center text-center mb-16 md:mb-24"
+        >
           <div className="inline-flex items-center space-x-2 text-blue-600 text-xs sm:text-sm font-extrabold tracking-widest uppercase mb-4">
-            <Sparkles size={16} className="text-blue-600 fill-blue-600" />
+            <Sparkles size={16} className="text-blue-600 fill-blue-600 animate-pulse" />
             <span>SELECTED WORK</span>
           </div>
           <h2 className="text-4xl md:text-[56px] font-black tracking-tight text-slate-900 leading-none">
@@ -51,7 +58,7 @@ export default function SelectedWork() {
           <p className="text-slate-500 max-w-xl text-base sm:text-lg font-medium leading-relaxed mt-4">
             A few products I've helped shape, and the thinking behind them.
           </p>
-        </div>
+        </motion.div>
 
         {/* Overlapping Sticky Stack Container */}
         <div className="space-y-16 md:space-y-24 pb-12">
