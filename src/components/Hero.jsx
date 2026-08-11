@@ -81,7 +81,7 @@ export default function Hero({ isLoaded, scrollY }) {
 
             {/* Supporting Text & Specialty Tags */}
             <motion.div variants={itemVariants} className="space-y-4 pt-2 max-w-2xl">
-              <p className="text-lg sm:text-xl md:text-2xl font-medium tracking-tight text-slate-800 leading-snug">
+              <p className="text-base sm:text-lg md:text-xl font-medium tracking-tight text-slate-800 leading-snug">
                 Designing products. Building the web. Testing experiences{' '}
                 <a 
                   href="https://livetronics.com" 
