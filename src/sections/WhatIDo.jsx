@@ -19,25 +19,19 @@ export default function WhatIDo() {
 
           {/* Right Column: Statement & Sub-paragraph */}
           <div className="lg:col-span-9 flex flex-col justify-start">
-            {/* Main Editorial Statement */}
+            {/* Main Editorial Statement using Custom Copy */}
             <h3 className="text-3xl sm:text-5xl md:text-[54px] font-extrabold tracking-tight text-slate-900 leading-[1.15] max-w-4xl">
-              I turn messy, real-world problems into products people actually{' '}
+              Product Designer focused on turning complex problems into{' '}
               <span className="font-script text-blue-600 font-normal inline-block transform translate-y-1">
-                understand
+                simple
               </span>
-              — interfaces that feel obvious, systems that{' '}
+              {' '}and meaningful digital experiences.{' '}
               <span className="text-slate-400/90 font-bold block sm:inline">
-                scale, and details that quietly do the work.
+                I design web and mobile products end-to-end, combining product thinking, UX strategy, 
+                interaction design, and usability testing to create experiences that are intuitive, scalable, 
+                and impactful.
               </span>
             </h3>
-
-            {/* Custom Supporting Description Paragraph */}
-            <p className="text-slate-500 font-medium leading-relaxed text-base sm:text-lg md:text-xl max-w-3xl mt-8 md:mt-12">
-              Product Designer focused on turning complex problems into simple, meaningful digital experiences. 
-              I design web and mobile products end-to-end, combining product thinking, UX strategy, 
-              interaction design, and usability testing to create experiences that are intuitive, scalable, 
-              and impactful.
-            </p>
           </div>
 
         </div>
