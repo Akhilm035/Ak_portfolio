@@ -38,8 +38,8 @@ export default function WhatIDo() {
   const words = rawText.split(' ');
 
   return (
-    <section id="about" className="w-full bg-[#f8f9fa] py-24 md:py-32 px-6 md:px-12 lg:px-16 text-slate-900 border-t border-slate-200/50">
-      <div className="max-w-7xl mx-auto">
+    <section id="about" className="w-full bg-[#f8f9fa] py-24 md:py-32 text-slate-900 border-t border-slate-200/50">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           
           {/* Left Column: Section Badge */}

@@ -59,8 +59,8 @@ export default function SelectedWork() {
     : projects.filter(p => p.category === activeFilter);
 
   return (
-    <section id="work" className="w-full bg-[#f8f9fa] py-24 px-6 md:px-12 lg:px-16 text-slate-900 border-t border-slate-200/60">
-      <div className="max-w-7xl mx-auto">
+    <section id="work" className="w-full bg-[#f8f9fa] py-24 text-slate-900 border-t border-slate-200/60">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
