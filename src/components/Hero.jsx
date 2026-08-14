@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Sparkles, PenTool, Layout, CheckSquare, Cpu } from 'lucide-react';
 import CloudLayer from './CloudLayer';
+import GlowingParticles from './GlowingParticles';
 
 export default function Hero({ isLoaded, scrollY }) {
   // Parallax offsets calculation (subtle, GPU-accelerated)
@@ -32,6 +33,9 @@ export default function Hero({ isLoaded, scrollY }) {
     <section className="relative w-full min-h-screen h-[100vh] flex flex-col justify-between overflow-hidden bg-gradient-to-b from-[#389deb] via-[#60a8f8] to-[#d6ebfc] text-slate-900 select-none">
       {/* Motion-Animated Cloud Layers & Sun Flare */}
       <CloudLayer />
+
+      {/* Premium glowing interaction particle system */}
+      <GlowingParticles />
 
       {/* Main Content Container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-28 md:pt-32 lg:pt-36 pb-12 md:pb-20 flex-1 flex flex-col justify-center">
