@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MoreHorizontal, X, ArrowUpRight } from 'lucide-react';
 
-export default function Navbar({ isScrolled, isLoaded }) {
+export default function Navbar({ isScrolled, isLoaded, currentPage, onPageChange }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Close mobile menu on ESC key press
@@ -15,9 +15,24 @@ export default function Navbar({ isScrolled, isLoaded }) {
   }, []);
 
   const navItems = [
-    { label: 'ABOUT', href: '#about' },
+    { label: 'WORK', href: '#work' },
+    { label: 'ABOUT ME', href: '#about' },
     { label: 'RESUME', href: '#resume' },
   ];
+
+  const handleItemClick = (e, item) => {
+    e.preventDefault();
+    if (onPageChange) {
+      if (item.label === 'WORK') {
+        onPageChange('work');
+      } else if (item.label === 'ABOUT ME') {
+        onPageChange('home', 'about');
+      } else {
+        window.location.hash = item.href;
+      }
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
     <motion.header
@@ -38,7 +53,7 @@ export default function Navbar({ isScrolled, isLoaded }) {
             href="#"
             onClick={(e) => {
               e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              if (onPageChange) onPageChange('home');
               setMobileMenuOpen(false);
             }}
             className="flex items-center space-x-2.5 group focus:outline-none focus:ring-2 focus:ring-sky-500 rounded-full"
@@ -67,7 +82,13 @@ export default function Navbar({ isScrolled, isLoaded }) {
                   <a
                     key={item.label}
                     href={item.href}
-                    className="text-xs font-bold tracking-widest text-slate-700 hover:text-sky-600 transition-colors duration-200 uppercase relative py-1 group"
+                    onClick={(e) => handleItemClick(e, item)}
+                    className={`text-xs font-bold tracking-widest transition-colors duration-200 uppercase relative py-1 group ${
+                      (item.label === 'WORK' && currentPage === 'work') || 
+                      (item.label === 'ABOUT ME' && currentPage === 'home')
+                        ? 'text-sky-600 font-extrabold' 
+                        : 'text-slate-700 hover:text-sky-600'
+                    }`}
                   >
                     {item.label}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
@@ -124,8 +145,13 @@ export default function Navbar({ isScrolled, isLoaded }) {
                   <a
                     key={item.label}
                     href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-white/10 text-sm font-semibold tracking-wider text-slate-100 hover:text-sky-300 transition-colors"
+                    onClick={(e) => handleItemClick(e, item)}
+                    className={`flex items-center justify-between px-3 py-2.5 rounded-xl hover:bg-white/10 text-sm font-semibold tracking-wider transition-colors ${
+                      (item.label === 'WORK' && currentPage === 'work') || 
+                      (item.label === 'ABOUT ME' && currentPage === 'home')
+                        ? 'text-sky-300 font-extrabold bg-white/5' 
+                        : 'text-slate-100 hover:text-sky-300'
+                    }`}
                   >
                     <span>{item.label}</span>
                     <ArrowUpRight size={14} className="opacity-60" />

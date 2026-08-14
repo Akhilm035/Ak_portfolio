@@ -5,11 +5,12 @@
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-script: 'Caveat', cursive;
     --font-serif-italic: 'Instrument Serif', serif;
+    --font-signature: 'Sacramento', cursive;
   }
 
   body {
     font-family: var(--font-sans);
-    overflow-x: hidden;
+    overflow-x: clip;
     background-color: #f8f9fa;
     color: #0f172a;
     -webkit-font-smoothing: antialiased;
@@ -25,6 +26,10 @@
 .font-serif-italic {
   font-family: var(--font-serif-italic);
   font-style: italic;
+}
+
+.font-signature {
+  font-family: var(--font-signature);
 }
 
 /* Responsive Headline Typography Clamping */
@@ -164,4 +169,13 @@
     animation: none !important;
     transform: none !important;
   }
+}
+
+/* Scrollbar Hiding Utility */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

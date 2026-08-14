@@ -58,7 +58,7 @@ export default function Hero({ isLoaded, scrollY }) {
               </motion.span>
               <span>
                 Hey, I'm{' '}
-                <span className="font-extrabold text-blue-600">
+                <span className="font-extrabold text-slate-900">
                   Akhil
                 </span>
               </span>
